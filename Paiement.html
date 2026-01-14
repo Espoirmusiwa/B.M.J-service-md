@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abonnement VIP | BMJ.SERVICE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"/>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, Helvetica, sans-serif; }
+
+body {
+    background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: rgba(11,28,45,0.9);
+    position: relative;
+    z-index: 1000;
+}
+.logo { font-size: 24px; font-weight: bold; color: #00e5ff; }
+.menu-icon { font-size: 26px; cursor: pointer; }
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid #00e5ff;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    width: 220px;
+    z-index: 1000;
+}
+.menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.menu a:hover { background:#00e5ff; color:#000; }
+
+/* CONTAINER DES PAIEMENTS */
+.payment-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 8%;
+    gap: 30px;
+}
+
+.payment-container h2 {
+    font-size: 32px;
+    color: #00e5ff;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.payment-method {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid #00e5ff;
+    border-radius: 15px;
+    background: rgba(0,0,0,0.7);
+    font-size: 18px;
+    font-weight: bold;
+    color: #00e5ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    background: #00e5ff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.payment-method i {
+    font-size: 30px;
+}
+
+/* BOUTON RETOUR */
+.back-btn {
+    background: rgba(0,0,0,0.7);
+    border: 2px solid #00e5ff;
+    color: #00e5ff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* FOOTER SOCIALS */
+footer.socials {
+    background: rgba(11,28,45,0.85);
+    padding: 15px;
+    text-align: center;
+}
+footer.socials a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 28px;
+    color: #fff;
+    transition: transform 0.3s;
+}
+footer.socials a:hover { transform: scale(1.2); color: #00e5ff; }
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BMJ.SERVICE</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="tableau_de_bord.html">Tableau de bord</a>
+        <a href="nos_services.html">Nos services</a>
+        <a href="apropos.html">À propos de nous</a>
+        <a href="formation.html">Formation</a>
+        <a href="paiement.html">Abonnement VIP</a>
+        <a href="mon_profil.html">Mon Profil</a>
+    </div>
+</header>
+
+<div class="payment-container">
+    <h2>Abonnement VIP</h2>
+
+    <div class="payment-method" onclick="location.href='details_paiement.html'">
+        <span>Airtel Money</span> <i class="fa-brands fa-airtel"></i>
+    </div>
+
+    <div class="payment-method" onclick="location.href='paiement_non_disponible.html'">
+        <span>Orange Money</span> <i class="fa-solid fa-money-bill-wave"></i>
+    </div>
+
+    <div class="payment-method" onclick="location.href='paiement_non_disponible.html'">
+        <span>M-Pesa (Vodacom)</span> <i class="fa-solid fa-mobile-screen-button"></i>
+    </div>
+
+    <a href="tableau_de_bord.html" class="back-btn">← Retour</a>
+</div>
+
+<footer class="socials">
+    <a href="https://wa.me/243993585711" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/greatman9609" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@bmjreussir" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@justinmussiwa?si=9NxCJ6VUf39Je03k" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/posts/justin-mussiwa-167b8a331_cest-%C3%A0-vous-de-prendre-conscience-activity-7341023134810017792-ogV-" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership & Management | BMJ.SERVICE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"/>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, Helvetica, sans-serif; }
+
+body {
+    background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: rgba(11,28,45,0.9);
+    position: relative;
+    z-index: 1000;
+}
+.logo { font-size: 24px; font-weight: bold; color: #00e5ff; }
+.menu-icon { font-size: 26px; cursor: pointer; }
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid #00e5ff;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    width: 220px;
+    z-index: 1000;
+}
+.menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.menu a:hover { background:#00e5ff; color:#000; }
+
+/* CONTENT */
+.content-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.book-content {
+    background: rgba(0,0,0,0.75);
+    border: 3px solid #00e5ff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,229,255,0.6);
+}
+
+.book-content h2 {
+    font-size: 32px;
+    color: #00e5ff;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.book-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* BOUTONS */
+.btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid #00e5ff;
+    color: #00e5ff;
+    background: rgba(0,0,0,0.7);
+    margin: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: #00e5ff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* FOOTER SOCIALS */
+footer.socials {
+    background: rgba(11,28,45,0.85);
+    padding: 15px;
+    text-align: center;
+}
+footer.socials a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 28px;
+    color: #fff;
+    transition: transform 0.3s;
+}
+footer.socials a:hover { transform: scale(1.2); color: #00e5ff; }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BMJ.SERVICE</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="tableau_de_bord.html">Tableau de bord</a>
+        <a href="nos_services.html">Nos services</a>
+        <a href="formation.html">Formation</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
+        <a href="paiement.html">Abonnement VIP</a>
+        <a href="mon_profil.html">Mon Profil</a>
+    </div>
+</header>
+
+<div class="content-box">
+    <div class="book-content">
+        <h2>Leadership & Management</h2>
+        <p>Plongez dans l'art du leadership et du management efficace. Ce guide complet vous aidera à comprendre comment inspirer vos équipes, prendre des décisions stratégiques, motiver vos collaborateurs et développer vos compétences en communication et en gestion de projets.</p>
+        <p>À travers 17 pages riches en conseils pratiques, études de cas et exercices, vous découvrirez les méthodes des leaders à succès et apprendrez à les appliquer pour transformer vos équipes et vos organisations.</p>
+        
+        <!-- Boutons -->
+        <a href="leadership_livre.pdf" download class="btn">Télécharger le livre</a>
+        <a href="tableau_de_bord.html" class="btn">← Retour</a>
+    </div>
+</div>
+
+<footer class="socials">
+    <a href="https://wa.me/243993585711" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/greatman9609" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@bmjreussir" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@justinmussiwa?si=9NxCJ6VUf39Je03k" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/posts/justin-mussiwa-167b8a331_cest-%C3%A0-vous-de-prendre-conscience-activity-7341023134810017792-ogV-" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>

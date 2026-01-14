@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation | BMJ.SERVICE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"/>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: rgba(11,28,45,0.9);
+    position: relative;
+    z-index: 1000;
+}
+.logo { font-size: 24px; font-weight: bold; color: #00e5ff; }
+.menu-icon { font-size: 26px; cursor: pointer; }
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid #00e5ff;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    width: 220px;
+    z-index: 1000;
+}
+.menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.menu a:hover { background:#00e5ff; color:#000; }
+
+/* FORMATION CARDS VERTICALES */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 8%;
+    gap: 20px;
+    flex: 1;
+}
+
+.card {
+    background: rgba(0,0,0,0.7);
+    border: 2px solid #00e5ff;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    padding: 25px 20px;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    background: #00e5ff;
+    color: #000;
+    transform: scale(1.05);
+}
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.card a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff9800;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.card a:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* RETURN BUTTON */
+.return-btn {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 14px 28px;
+    background-color: #ff9800;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.return-btn:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+/* FOOTER SOCIALS */
+footer.socials {
+    background: rgba(11,28,45,0.85);
+    padding: 15px;
+    text-align: center;
+    margin-top:auto;
+}
+footer.socials a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 28px;
+    color: #fff;
+    transition: transform 0.3s;
+}
+footer.socials a:hover { transform: scale(1.2); color: #00e5ff; }
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BMJ.SERVICE</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="tableau_de_bord.html">Tableau de bord</a>
+        <a href="nos_services.html">Nos services</a>
+        <a href="apropos.html">À propos de nous</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
+        <a href="paiement.html">Abonnement VIP</a>
+        <a href="mon_profil.html">Mon profil</a>
+    </div>
+</header>
+
+<div class="cards-container">
+    <div class="card">
+        <h3>Finance et Gestion d'entreprise</h3>
+        <a href="finance_entreprises.html">Accéder</a>
+    </div>
+    <div class="card">
+        <h3>Leadership et Management</h3>
+        <a href="leadership_management.html">Accéder</a>
+    </div>
+    <div class="card">
+        <h3>Marketing Digital</h3>
+        <a href="marketing_digital.html">Accéder</a>
+    </div>
+    <div class="card">
+        <h3>Entrepreneuriat et Startups</h3>
+        <a href="entrepreneuriat_startups.html">Accéder</a>
+    </div>
+    <div class="card">
+        <h3>Comptabilité et Audit</h3>
+        <a href="comptabilite_audit.html">Accéder</a>
+    </div>
+    <div class="card">
+        <h3>Investissement et Bourse</h3>
+        <a href="investissement_bourse.html">Accéder</a>
+    </div>
+    <div class="card">
+        <h3>Développement personnel</h3>
+        <a href="developpement_personnel.html">Accéder</a>
+    </div>
+</div>
+
+<!-- TOUCHE RETOUR EN BAS -->
+<a href="tableau_de_bord.html" class="return-btn">Retour</a>
+
+<footer class="socials">
+    <a href="https://wa.me/243993585711" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/greatman9609" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@bmjreussir" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@justinmussiwa?si=9NxCJ6VUf39Je03k" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/posts/justin-mussiwa-167b8a331_cest-%C3%A0-vous-de-prendre-conscience-activity-7341023134810017792-ogV-" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
